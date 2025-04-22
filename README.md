@@ -97,6 +97,7 @@ React Router: A routing library for single-page applications (SPA)
 📂 Folder Structure
 Here’s the folder structure and a breakdown of each directory:
 
+```plaintext
 src/
 ├── assets/                # Static assets (images, logos, icons)
 │   ├── logo.svg
