@@ -94,7 +94,7 @@ TailwindCSS: Utility-first CSS framework for styling
 
 React Router: A routing library for single-page applications (SPA)
 
-📂 Folder Structure
+📂 Folder Structure;
 Here’s the folder structure and a breakdown of each directory:
 
 ```plaintext
