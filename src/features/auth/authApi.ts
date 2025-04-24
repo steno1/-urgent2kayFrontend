@@ -16,11 +16,11 @@ interface Token {
   token: string;
 }
 
-// Create the API slice manually
+
 const authApi = createApi({
   reducerPath: 'authApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://your-api-url.com/', // Update with your real API URL
+    baseUrl: 'https://your-api-url.com/', 
   }),
   endpoints: (builder) => ({
     loginUser: builder.mutation<{ token: string }, Credentials>({
@@ -49,7 +49,7 @@ const authApi = createApi({
   }),
 });
 
-// Export the hooks
+
 export const {
   useLoginUserMutation,
   useRegisterUserMutation,
