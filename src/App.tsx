@@ -1,11 +1,15 @@
 // src/App.tsx
-const App = () => {
-    return (
-      <div className="p-6 text-center text-lg font-semibold text-gray-700">
-        URGENT 2KAY – Dummy App is Live ⚡
-      </div>
-    );
-  };
-  
-  export default App;
-  
+import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import AppRoutes from "./routes/AppRoutes";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <AppRoutes />
+    </BrowserRouter>
+  );
+}
+
+export default App;

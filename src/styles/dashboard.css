@@ -1,0 +1,97 @@
+
+.dashboard-page {
+    min-height: 100vh;
+    background-color: #f9fafb;
+    padding: 2rem;
+  }
+  
+  .dashboard-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .dashboard-header p {
+    font-size: 1.2rem;
+    color: #4a5568;
+  }
+  
+  .dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap; 
+  }
+  
+  .dashboard-buttons button {
+    padding: 1rem 2rem;
+    background-color: #3182ce;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dashboard-buttons button:hover {
+    background-color: #2b6cb0;
+  }
+  
+  .dashboard-footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4a5568;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .dashboard-header h2 {
+      font-size: 2rem; 
+    }
+  
+    .dashboard-header p {
+      font-size: 1rem; 
+    }
+  
+    .dashboard-buttons {
+      flex-direction: column; 
+      gap: 0.5rem; 
+    }
+  
+    .dashboard-buttons button {
+      width: 100%; 
+      padding: 1rem; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-container {
+      padding: 1rem; 
+    }
+  
+    .dashboard-header h2 {
+      font-size: 1.75rem; 
+    }
+  
+    .dashboard-header p {
+      font-size: 0.9rem; 
+    }
+  
+    .dashboard-footer {
+      font-size: 0.8rem; 
+    }
+  }
+  
