@@ -1,50 +1,72 @@
-import React from "react";
+import React, { useState } from 'react';
+import './login.css';
 
-// Inline styles for the login page
 const Login = () => {
-  
-  const containerStyle: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    backgroundColor: '#f3f4f6', 
-  };
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const [error, setError] = useState('');
 
   
-  const contentStyle: React.CSSProperties = {
-    textAlign: 'center',
-    padding: '20px',
-    backgroundColor: '#ffffff',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    maxWidth: '400px',
-    width: '100%',
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  // Heading style with mobile responsiveness
-  const headingStyle: React.CSSProperties = {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    color: '#4B5563', 
-  };
-
-  
-  const subheadingStyle: React.CSSProperties = {
-    color: '#6B7280', 
-    marginBottom: '20px',
-  };
-
-  // Mobile responsiveness for the heading
-  const mobileHeadingStyle: React.CSSProperties = {
-    fontSize: '1.5rem', 
+  const handleSubmit = () => {
+    if (!formData.email || !formData.password) {
+      setError('Please fill in all fields.');
+    } else {
+      setError('');
+      alert('Login functionality coming soon!');
+      //  call an API to handle login functionality
+    }
   };
 
   return (
-    <div style={containerStyle}>
-      <div style={contentStyle}>
-        <h1 style={{ ...headingStyle, ...mobileHeadingStyle }}>Login</h1>
-        <p style={subheadingStyle}>Login functionality coming soon.</p>
+    <div className="login-container">
+      <div className="login-content">
+        <h1 className="login-heading">Login</h1>
+        <p className="login-subheading">Login functionality coming soon.</p>
+
+        {error && <div className="error-message">{error}</div>}
+
+        <div className="login-form">
+          <div className="form-field">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div className="form-field">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <div className="form-actions">
+            <button className="submit-btn" onClick={handleSubmit}>
+              Login
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
