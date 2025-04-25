@@ -62,6 +62,13 @@
     background-color: #e2e8f0;
     color: #2b6cb0;
   }
+
+  .highlight {
+    color: #3182ce;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+  
   
   /* Mobile responsiveness */
   @media (max-width: 768px) {

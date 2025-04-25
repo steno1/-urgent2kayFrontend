@@ -5,7 +5,9 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="home-content">
-        <h1 className="home-heading">Welcome to URGENT 2KAY</h1>
+        <h1 className="home-heading">
+          Welcome to <span className="highlight">URGENT 2KAY</span>
+        </h1>
         <p className="home-subheading">
           The seamless way to manage your bills, payments, and requests.
         </p>
