@@ -25,7 +25,6 @@ const Dashboard = ({ role }: { role: string }) => {
             <>
               <button className="dashboard-btn">Create a New Request</button>
               <button className="dashboard-btn">Track My Requests</button>
-              <button className="dashboard-btn">Shared Goals</button>
             </>
           )}
 
@@ -41,7 +40,6 @@ const Dashboard = ({ role }: { role: string }) => {
           <button className="dashboard-btn">Notifications Center</button>
           <button className="dashboard-btn">Scheduled Payments</button>
           <button className="dashboard-btn">Relationship Profiles</button>
-          <button className="dashboard-btn">Shared Goals</button>
         </section>
 
         <footer className="dashboard-footer">
